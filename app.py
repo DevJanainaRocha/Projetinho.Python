@@ -1,6 +1,5 @@
 import os
 #acima a importação de uma biblioteca que nos permite usar algumas funções 
-#que podem ser necessárias durante a connstrução do código
 
 restaurantes = [{'nome':'Cantina', 'categoria':'Italiano', 'ativo':False}, 
                 {'nome':'Praça', 'categoria':'Japonesa', 'ativo':False},
@@ -27,37 +26,40 @@ def finalizar_app():
     exibir_subtitulo ('Finalizando o app\n')
 
 def voltar_ao_menu_principal():
-#esta função serve para retornar ao menu principal apos o usuário digitar uma tecla
-#Input - tecla digitda pelo usiário
+#esta função serve para retornar ao menu principal após o usuário digitar uma tecla
+#Input - tecla digitada pelo usuário
     input('\nDigite uma tecla para voltar ao menu principal')
     main() 
 
 def exibir_subtitulo(texto):
 #Esta função serve para apresentar o subtitulo das demais funções quando forem acionadas.
+#pode ser usada sempre que houver informações repetidas dentro de diferentes funções.
     os.system('cls')
-    linha = '*' * (len(texto)) #len indica a quantidade de letras do texto
+    linha = '*' *(len(texto)) #len indica que a quantidade de asteristicos deve ser proporcional a quantidade de letras do texto
     print(linha)
     print(texto)
     print(linha) 
-
+  
 def opcao_invalida():
+#Esta função é acionada quando o usuário escolhe um opção que não existe. 
     exibir_subtitulo('Opção inválida!\n')
     voltar_ao_menu_principal()  
 
 def cadastrar_restaurante(): 
 #Esta função serve para cadastrar um restaurante
-#Input - nome do restaurante, categori e status
+#Input - nome do restaurante, categoria e status
 #Output - Restaurante cadastrado com sucesso
     exibir_subtitulo('Cadastro de novos restaurantes\n')
     nome_do_restaurante=input('Digite o nome do restaurante que deseja cadastrar: ')
     categoria=input(f'Digite a categoria do restaurante {nome_do_restaurante}: ')
-    dados_do_restaurante={'Nome': nome_do_restaurante, 'Categoria': categoria, 'Ativo': False}
+    dados_do_restaurante={'nome': nome_do_restaurante, 'categoria': categoria, 'ativo': False}
     #abaixo as instruções para inserir o restaurante na lista(variáve gobal criada antes das funções)
     restaurantes.append(dados_do_restaurante)
     print(f'O restaurante {nome_do_restaurante} foi cadastrado com sucesso!')
     voltar_ao_menu_principal()
     
 def listar_restaurantes():
+#Esta função imprime uma lista com os dados dos restaurantes cadastrados
     exibir_subtitulo('Listando restaurantes')
 
     print(f"{'Nome do restaurante'.ljust(22)} | {'Categoria'.ljust(20)} | Status")
@@ -78,8 +80,8 @@ def alternar_estado_restaurante():
     for restaurante in restaurantes:
         if nome_restaurante == restaurante ['nome']:
             restaurante_encontrado = True
-            restaurante['Ativo'] = not restaurante ['Ativo']
-            mensagem = f'O restaurante {nome_restaurante} foi ativado com sucesso!' if restaurante ['Ativo'] else f'O restaurante {nome_restaurante} foi desativado com sucesso!'
+            restaurante['ativo'] = not restaurante ['ativo']
+            mensagem = f'O restaurante {nome_restaurante} foi ativado com sucesso!' if restaurante ['ativo'] else f'O restaurante {nome_restaurante} foi desativado com sucesso!'
             print(mensagem)
     if not restaurante_encontrado:
         print('O restaurante não foi encontrado.')
