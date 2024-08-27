@@ -2,8 +2,8 @@ import os
 #acima a importação de uma biblioteca que nos permite usar algumas funções 
 
 restaurantes = [{'nome':'Cantina', 'categoria':'Italiano', 'ativo':False}, 
-                {'nome':'Praça', 'categoria':'Japonesa', 'ativo':False},
-                {'nome':'Pizza Suprema', 'categoria':'Pizza', 'ativo':True},]
+              {'nome':'Praça', 'categoria':'Japonesa', 'ativo':False},
+              {'nome':'Pizza Suprema', 'categoria':'Pizza', 'ativo':True},]
 
 #variável global referente a lista de restaurantes cadastrados através do app.py
 #A estrutura de dados dicionário nos permite manter dentro da chaves, todas as 
