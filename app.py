@@ -33,7 +33,7 @@ def voltar_ao_menu_principal():
 
 def exibir_subtitulo(texto):
 #Esta função serve para apresentar o subtitulo das demais funções quando forem acionadas.
-#pode ser usada sempre que houver informações repetidas dentro de diferentes funções.
+#pode ser usada para evitar informações repetidas dentro de diferentes funções.
     os.system('cls')
     linha = '*' *(len(texto)) #len indica que a quantidade de asteristicos deve ser proporcional a quantidade de letras do texto
     print(linha)
