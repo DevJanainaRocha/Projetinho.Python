@@ -1,39 +1,43 @@
+# biblioteca que nos permite usar algumas funções 
 import os
-#acima a importação de uma biblioteca que nos permite usar algumas funções 
-
-restaurantes = [{'nome':'Cantina', 'categoria':'Italiano', 'ativo':False}, 
-              {'nome':'Praça', 'categoria':'Japonesa', 'ativo':False},
-              {'nome':'Pizza Suprema', 'categoria':'Pizza', 'ativo':True},]
 
 #variável global referente a lista de restaurantes cadastrados através do app.py
 #A estrutura de dados dicionário nos permite manter dentro da chaves, todas as 
 #Innformações do restaurante cadastrado, se tornando mais interessante que a lista
 #Para este projeto.
 
-def exibir_nome_do_programa():
+restaurantes = [{'nome':'Cantina', 'categoria':'Italiano', 'ativo':False}, 
+              {'nome':'Praça', 'categoria':'Japonesa', 'ativo':False},
+              {'nome':'Pizza Suprema', 'categoria':'Pizza', 'ativo':True},]
+
 #Esta função serve para exibir o nome do programa
+def exibir_nome_do_programa():
     print('SABOR EXPRESS\n  ')
 
-def exibir_opcoes():
 #Esta função serve para listar um menu de opções para o usuário
+def exibir_opcoes():
+
     print('1.Cadastrar restaurante')
     print('2.Listar restaurantes')
     print('3.Alternar estado do restaurante')
     print('4.Sair') 
-
-def finalizar_app():
+  
 #Esta função serve para finalizar o app.
+def finalizar_app():
+
     exibir_subtitulo ('Finalizando o app\n')
 
-def voltar_ao_menu_principal():
 #esta função serve para retornar ao menu principal após o usuário digitar uma tecla
 #Input - tecla digitada pelo usuário
+def voltar_ao_menu_principal():
+
     input('\nDigite uma tecla para voltar ao menu principal')
     main() 
 
-def exibir_subtitulo(texto):
 #Esta função serve para apresentar o subtitulo das demais funções quando forem acionadas.
 #pode ser usada para evitar informações repetidas dentro de diferentes funções.
+def exibir_subtitulo(texto):
+
     os.system('cls')
     linha = '*' *(len(texto)) #len indica que a quantidade de asteristicos deve ser proporcional a quantidade de letras do texto
     print(linha)
