@@ -1,2 +1,13 @@
 # Projetinho.Python
-Este projeto foi criado durante ocurso de python da Alura, onde iniciamos a aplicação de conceitos de funções, listas, dicionários, try/exeption e começamos a dar corpo ao projeto do app restaurante sem a aplicação da orientação a obj.
+Conceitos aplicados:
+- variável global.
+- estrutura de dados dicionário.
+- funções 
+- imput
+- output
+- comando len (que neste projeto nos permitiu iserir uma quantidade de asteristicos proporcional a quantidade de letras no texto a ser impresso.)
+- comando: for, try/exeption
+- condicional: if, elif, else
+- função principal
+- if __name__ == '__main__': (espaço em pytho que permite rodar todo o código desenvolvido)
+
